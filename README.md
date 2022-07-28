@@ -1,2 +1,3 @@
 # ThreadTeknofest
-Acıkhack2022TDDİ
+
+İşletme ve kurumlar için yapay zeka tabanlı sohbet botu. #Acıkhack2022TDDİ
