@@ -1,0 +1,24 @@
+{
+    "Tüm Sorular": [
+      {
+        "etiket": "ad",
+        "pattern": ["ben *", "adım *"],
+        "response": ["Memnun oldum <star>, sana nasıl yardımcı olabilirim"]
+      },
+      {
+        "etiket": "yas",
+        "pattern": ["yaşım *"], 
+        "response": ["demek <star> yaşındasın süper"]
+      },
+      {
+        "etiket" : "dolar",
+        "pattern" : ["dolar"],
+        "response" : ["Bugün dolar kuru <dolar> seyrinde devam ediyor.", "<dolar> seviyesinde."]
+      },
+      {
+        "etiket" : "euro",
+        "pattern" : ["euro"],
+        "response" : ["Bügün euro kuru <euro> seyrinde devam ediyor."]
+      }
+    ]
+}
