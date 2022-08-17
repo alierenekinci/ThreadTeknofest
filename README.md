@@ -18,9 +18,9 @@ Ben env oluşturmak için conda kullanıyorum. Conda açık kaynaklı paket ve o
 conda create -n acikhack2022tddi python=3.9
 
 ```
-![](resimler\env-olusturma.png)
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/env-olusturma.png)
 
-![](resimler\env-onay.png)
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/env-onay.png)
 Onaylamak için 'y' yazıp enter'e  basın.
 
 
@@ -31,7 +31,7 @@ Env aktifleştirmek ve gerekli kütüphaneleri yüklemek için aşağıdaki komu
 ```
 conda activate acikhack2022tddi
 ```
-![](resimler\env-aktif.png)
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/env-aktif.png)
 
 Gördüğünüz gibi PS(Poweshell) solunda (acikhack2022tddi) yazıyor. Şimdi gerekli paketleri indirmek için aşağıdaki komutu kullanın.
 
