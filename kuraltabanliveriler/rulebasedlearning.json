@@ -2,23 +2,35 @@
     "Tüm Sorular": [
       {
         "etiket": "ad",
-        "pattern": ["ben *", "adım *"],
-        "response": ["Memnun oldum <star>, sana nasıl yardımcı olabilirim"]
+        "pattern": ["ben *", "adım *", "Ben *", "Adım *", "Benim adım *"],
+        "response": ["Memnun oldum <star>, sana nasıl yardımcı olabilirim. Bir kaç kelime ile sorununu yazarmısın?"]
       },
       {
         "etiket": "yas",
-        "pattern": ["yaşım *"], 
+        "pattern": ["yaşım *", "Yaşım *"], 
         "response": ["demek <star> yaşındasın süper"]
       },
       {
         "etiket" : "dolar",
-        "pattern" : ["dolar"],
+        "pattern" : ["dolar", "dolar kuru"],
         "response" : ["Bugün dolar kuru <dolar> seyrinde devam ediyor.", "<dolar> seviyesinde."]
       },
       {
         "etiket" : "euro",
-        "pattern" : ["euro"],
+        "pattern" : ["euro", "euro kuru", "euro "],
         "response" : ["Bügün euro kuru <euro> seyrinde devam ediyor."]
+      }, 
+      {
+        "etiket" : "merhaba",
+        "pattern" : ["merhaba", "selam"],
+        "response" : ["Hoşgeldiniz, ben Ankara Büyükşehir Belediyesinin Hizmetlerini tanıtan bir küçük botum.\n\nSana nasıl yardımcı olabilirim?\nÖrneğin bana sorabileceğin soru: Mavi masa nedir?"]
+        
+      },
+      {
+        "etiket" : "nasılsın",
+        "pattern" : ["nasılsın", "nasıl", "naber"],
+        "response" : ["Süper hissediyorum. Bana bir kaç kelime ile sorununu iletebilirsin. \n\nÖrnek: Atıksu bedeli nedir?"] 
       }
+
     ]
 }
