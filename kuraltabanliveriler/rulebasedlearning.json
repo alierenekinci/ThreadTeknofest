@@ -12,12 +12,12 @@
       },
       {
         "etiket" : "dolar",
-        "pattern" : ["dolar", "dolar kuru"],
+        "pattern" : ["dolar", "dolar kuru", "dolar kaç", "dolar kaç lira", "dolar kuru kaç lira"],
         "response" : ["Bugün dolar kuru <dolar> seyrinde devam ediyor.", "<dolar> seviyesinde."]
       },
       {
         "etiket" : "euro",
-        "pattern" : ["euro", "euro kuru", "euro "],
+        "pattern" : ["euro", "euro kuru", "euro kaç", "euro kaç lira", "euro kuru kaç lira"],
         "response" : ["Bügün euro kuru <euro> seyrinde devam ediyor."]
       }, 
       {

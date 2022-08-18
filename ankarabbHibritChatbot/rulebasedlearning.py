@@ -1,9 +1,12 @@
+# Rule-Based Learning
+# ThreadTeknofest 2022
+
+
 import json
 import random
-import pandas as pd 
 
 
-path = r'kuraltabanliveriler\rulebasedlearning.json'
+path = 'kuraltabanliveriler\\rulebasedlearning.json'
 with open(path, encoding='utf-8') as f:
     veri = json.load(f)
 
@@ -36,16 +39,15 @@ def get_func(metin):
 
 
 
-def searchPattern(metin:str):
-
-
+def SearchPattern(metin:str):
     for veri_ in veri:
         pointer = -1
         for i in veri[veri_]:
             pointer += 1
             for j in i["pattern"]:
-                if metin == j: 
-
+                if metin == j:
+                    
+                    print(metin)
                     response = random.choice(veri[veri_][pointer]["response"])
                     print(response)
                     if str("<"+ metin +">") in response:
@@ -96,11 +98,10 @@ def searchPattern(metin:str):
                     
 
 
-# print(searchPattern("merhaba"))
-# print(searchPattern("yaşım 18"))
-# print(searchPattern("adım Ali Eren"+"`"))
-# print(searchPattern("ben görkem"))
-# print(searchPattern("dolar"))
-
-# print(searchPattern("merhaba"))
+# print(SearchPattern("merhaba"))
+# print(SearchPattern("yaşım 18"))
+# print(SearchPattern("adım Ali Eren"+"`"))
+# print(SearchPattern("ben görkem"))
+# print(SearchPattern("dolar"))
+# print(SearchPattern("merhaba"))
 

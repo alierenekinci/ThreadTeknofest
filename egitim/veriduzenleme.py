@@ -1,7 +1,10 @@
+# Veri düzenleme
+# ThreadTeknofest
+
 import os
 import json
 
-path = r'C:\Users\alierenekinci\Desktop\Project\ThreadTeknofest\veri'
+path = '.\\veri'
 
 def yukle():
     liste = os.listdir(path)
