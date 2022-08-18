@@ -9,54 +9,57 @@ Bende denemek istiyorum. Bu projeden esinlerek birşeyler yapmak istersen aşağ
 
 Dosyaları indirmek için bilgisayarınızda git yüklü olmalıdır. MacOs için Terminal'a, Windows için cmd yada powershellde aşağıdaki kod ile projeyi indirebilirsiniz. 
 
-[Git indir](https://www.com)
+[Git indir](https://git-scm.com/downloads) / [Anaconda indir](https://www.anaconda.com/products/distribution) / [VS Code indir](https://code.visualstudio.com/Download)
 
 ```
 git clone https://github.com/alierenekinci/ThreadTeknofest.git
 ```
 
 
-Ben env oluşturmak için conda kullanıyorum. Conda açık kaynaklı paket ve ortam yöneticisidir. Env oluşturmak için:
 ```
-conda create -n acikhack2022tddi python=3.9
+cd ThreadTeknofest
+conda env update -f environment.yml
 ```
-![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/env-olusturma.png)
-
-![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/env-onay.png)
-Onaylamak için 'y' yazıp enter'e  basın.
 
 
-Env aktifleştirmek ve gerekli kütüphaneleri yüklemek için aşağıdaki komutları kullanabilirsiniz.
 
-
+Oluşan Env aktifleştirmek için altaki komutu yazın.
 
 ```
 conda activate acikhack2022tddi
 ```
 ![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/env-aktif.png)
 
-Gördüğünüz gibi PS(Poweshell) solunda (acikhack2022tddi) yazıyor. Şimdi gerekli paketleri indirmek için aşağıdaki komutu kullanın.
+Gördüğünüz gibi PS(Poweshell) solunda (acikhack2022tddi) yazıyor. Bu şekilde bir sonuça vardıysanız gerekli ortamları yüklediğiniz için şimdi projeyi başlatabilirsiniz.
 
-```
-cd ThreadTeknofest
-conda env update -f environment.yml
-```
+
+VS Code(Visual Studio Code)'da indirdiğimiz klasörü açıp gerekli kurulumu yapalım. Daha önce yüklü değilse python eklentisini indirmeniz gerekmektedir. 
+
+
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/vscode-eklenti.png)
+
+
+Extensions kısmına gelip python yazarak aratıyoruz. Ve install basıp kuruyorsunuz.
+
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/vscode-pythoneklenti.png)
+
+
+Bir .py uzantılı dosyayı açıp sağ altta bulunan kısımdan acikhack2022tddi olan env aktifleştirmeniz gerekmektedir. 
+
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/vscode-env-kismi.png)
 
 [BotFather](https://sendpulse.com/knowledge-base/chatbot/create-telegram-chatbot)dan bir bot oluşturup. Tokeni  "ankarabbHibritChatbot\telegram_bot.py" dosyasında 
 
 ```python
-Token = "Tokeni Buraya Yapıştırın"
+BOT_TOKEN = "Tokeni Buraya Yapıştırın"
 ``` 
 satırını değiştirek kendi botunuzla eşleştirebilirsiniz.
 
-Tokeninizi atadıktan sonra "ankarabbHibritChatbot\telegram_bot.py" dosyasını çalıştırarak botu başlatabilirsiniz.
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/vscode-genel.png)
 
-Terminalde:
-```
-cd ankarabbHibritChatbot
-python telegram_bot.py
-```
-![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/env-aktif.png)
+Tokeninizi atadıktan sonra "ankarabbHibritChatbot\telegram_bot.py" dosyasını sağ üsten çalıştırarak botu başlatabilirsiniz.
+
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/vscode-buton.png)
 
 
 ## Model seçimi:
@@ -102,6 +105,7 @@ Best parameters set:
 Best score (Cross Validation = 10): 0.855
 
 Best parameters set:
+
 	clf__alpha: 1e-05
 	clf__loss: 'hinge'
 	clf__max_iter: 50
