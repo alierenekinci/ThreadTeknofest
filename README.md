@@ -2,26 +2,45 @@
 
 İşletme ve kurumlar için yapay zeka tabanlı sohbet botu. #Acıkhack2022TDDİ
 
+Tanıtım videosu: https://youtu.be/AfUKFJE9zsk
+
 
 ## Hızlı başlangıç
 
-Bende denemek istiyorum. Bu projeden esinlerek birşeyler yapmak istersen aşağıdaki adımları uygulayabilirsiniz. Verilerde değişiklik yaparsan aşağıdaki veriler için yönergeyi takip etmelisin.
+Bu projeden esinlerek birşeyler yapmak istersen aşağıdaki adımları uygulayabilirsiniz. Verilerde değişiklik yaparsan bir sonraki başlıktaki veriler için yönergeyi takip etmelisin.
 
 Dosyaları indirmek için bilgisayarınızda git yüklü olmalıdır. MacOs için Terminal'a, Windows için cmd yada powershellde aşağıdaki kod ile projeyi indirebilirsiniz. 
 
 [Git indir](https://git-scm.com/downloads) / [Anaconda indir](https://www.anaconda.com/products/distribution) / [VS Code indir](https://code.visualstudio.com/Download)
 
+Kullanılan kütüphaneler
+
+```
+pandas
+pandas_datareader
+nltk
+openpyxl
+scikit_learn
+snowballstemmer
+python-telegram-bot
+jupyterlab
+unicode_tr
+pickle
+
+```
+
+
+İlk olarak projeyi indirelim.
+
 ```
 git clone https://github.com/alierenekinci/ThreadTeknofest.git
 ```
 
-
+Şimdi ise encv oluşturalım.
 ```
 cd ThreadTeknofest
 conda env update -f environment.yml
 ```
-
-
 
 Oluşan Env aktifleştirmek için altaki komutu yazın.
 
@@ -64,7 +83,7 @@ Tokeninizi atadıktan sonra "ankarabbHibritChatbot\telegram_bot.py" dosyasını 
 
 ## Model seçimi:
 
-Modeli seçerken daha önce yapımış olan örnekleri inceleyerek karşılaştırdık. Naive Bayes, Desicion Tree, Random Forest ve SGDClassifier ile yapıldığını gördük. Skorlarını test edip Random Forest ve SGDClassifier kullanmaya karar verdik. İki model kullanmamızın sebebi ise SGDClassifier'da predict_proba olmamasıydı. Sorunu çözmek için yaptığımız araştırmada SGDClassifier için loss fonksiyonunu "hinge" yerine "modified_huber kullandığını gördük. Tek kelimeler için RandomForestClassifer kullanmaya karar verdik. Birden fazla kelimeler içinse SGDClassifier kullandık. 
+Modeli seçerken daha önce yapımış olan örnekleri inceleyerek karşılaştırdık. Naive Bayes, Desicion Tree, Random Forest ve SGDClassifier ile yapıldığını gördük. Skorlarını test edip Random Forest ve SGDClassifier kullanmaya karar verdik. İki model kullanmamızın sebebi ise SGDClassifier'da predict_proba olmamasıydı. Sorunu çözmek için yaptığımız araştırmada SGDClassifier için loss fonksiyonunu "hinge" yerine "modified_huber kullandığını gördük. Tek kelimeler için RandomForestClassifer kullanmaya karar verdik. Birden fazla kelimeler içinse SGDClassifier kullandık. İsterseniz aşağıdan bizim verimiz için 
 
 ### RandomForestClassifer
 
@@ -184,7 +203,16 @@ Daha sonra verilerinin önişlemesini yapması için aynı klasördeki veri_onis
 - [x] Bert modeli ve lstm modellerine bak
 - [x] Derin Öğrenme algoritmaları çalış
 - [x] Sözlük veya tfidf değeri düşük olunca anlamadım mesajı(hangi kümede olduğunun olasılık değerinden yola çıkılarak cevap verme mekanizması eklendi)
-- [ ] Sistem kendine update etsin, dışarıdan soru gelince kaydetme(acil)
-- [ ] Modellerin karşılaştırması.
+- [x] Modellerin karşılaştırması.
+- [ ] Sistem kendine update etsin, dışarıdan soru gelince kaydetme(acil - ama yetişmedi)
 - [ ] morfolojik analiz eklenip eklenmemesine karar verilmesi(yetişmedi)
 - [ ] vnlp ile stemmer in tekrardan düzenlenmesi (tutarlı olup olmadığına karar veremedik)
+
+Gelecekte ne yapabiliriz. 
+- [ ] Konumsal dizinleme yapmak istiyoruz.
+- [ ] Önişleme adımlarını daha doğru şekilde yapmak istiyoruz.
+- [ ] Doğal dil modeli kullanıp yaptığımız model ile arasındaki farkı bulmak istiyoruz.
+- [ ] Eşanlamlı sözcüklerle sorgu listesi yapıp daha tutarlı sonuçlar almak istiyoruz.
+
+
+“Millî hedef belli olmuştur. Ona ulaşacak yolları bulmak zor değildir. Önemli olan, çetin olan o yollar üzerinde çalışmaktır. Denebilir ki hiçbir şeye muhtaç değiliz. Yalnız tek bir şeye çok ihtiyacımız vardır: Çalışkan olmak. Toplumsal hastalıklarımızı incelersek temel olarak bundan başka, bundan önemli bir hastalık keşfedemeyiz; hastalık budur. O halde ilk işimiz bu hastalığı esaslı bir şekilde tedavi etmektir. Milleti çalışkan yapmaktır. Servet ve onun doğal sonucu olan refah ve mutluluk, yalnız ve ancak çalışkanların hakkıdır” - **Mustafa Kemal Atatürk**
