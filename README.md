@@ -39,7 +39,7 @@ VS Code(Visual Studio Code)'da indirdiğimiz klasörü açıp gerekli kurulumu y
 ![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/vscode-eklenti.png)
 
 
-Extensions kısmına gelip python yazarak aratıyoruz. Ve install basıp kuruyorsunuz.
+Extensions kısmına gelip python yazarak aratıyoruz. Ve install butonuna basıp kuruyorsunuz.
 
 ![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/vscode-pythoneklenti.png)
 
@@ -64,7 +64,7 @@ Tokeninizi atadıktan sonra "ankarabbHibritChatbot\telegram_bot.py" dosyasını 
 
 ## Model seçimi:
 
-Modeli seçerken daha önce yapımış olan örnekleri inceleyerek karşılaştırdık. Naive Bayes, Desicion Tree, Random Forest ve SGDClassifier ile yapıldığını gördük. Skorlarını test edip Random Forest ve SGDClassifier kullanmaya karar verdik. İki model kullanmamızın sebebi ise SGDClassifier'da predict_proba olmamasıydı. Sorunu çözmek için yaptığımız araştırmada SGDClassifier için loss fonksiyonunu "hinge" yerine "modified_huber kullandığını gördük. Tek kelimeler için RandomForestClassifer kullanmaya karar verdik. Birden fazla 
+Modeli seçerken daha önce yapımış olan örnekleri inceleyerek karşılaştırdık. Naive Bayes, Desicion Tree, Random Forest ve SGDClassifier ile yapıldığını gördük. Skorlarını test edip Random Forest ve SGDClassifier kullanmaya karar verdik. İki model kullanmamızın sebebi ise SGDClassifier'da predict_proba olmamasıydı. Sorunu çözmek için yaptığımız araştırmada SGDClassifier için loss fonksiyonunu "hinge" yerine "modified_huber kullandığını gördük. Tek kelimeler için RandomForestClassifer kullanmaya karar verdik. Birden fazla kelimeler içinse SGDClassifier kullandık. 
 
 ### RandomForestClassifer
 
@@ -137,7 +137,7 @@ Daha yüksek skorundan dolayı birden çok kelime içeren metinlerde SGDClassifi
 
 Yeni veri eklemek için veri klasöründe ankarabbSoruCevapVeriSeti-v02 adlı excel dosyasını kullanabilirsiniz.
 
-![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/env-aktif.png)
+![](https://github.com/alierenekinci/ThreadTeknofest/blob/main/resimler/excel-verilerin-kaydedilmesi.png)
 
 Tabloya bakacak olursak her yeni etiket için cevap var. Birbirine benzeyen soruların gruplandırması için ilk soruya benzersiz bir etiket atamanız gerekmekte. Etiket atanan satırdaki verinin cevabı bir sonraki etikete kadar olan soruların cevabıdır. Bu tarzda verileri kaydetmemizin sebebi verileri aşağıdaki gibi kaydetmek istememiz.
 
