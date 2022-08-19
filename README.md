@@ -5,6 +5,10 @@
 Tanıtım videosu: https://youtu.be/AfUKFJE9zsk
 
 
+https://user-images.githubusercontent.com/32363945/185703427-57d93d33-a5e3-4616-87ee-0927612776c6.mp4
+
+
+
 ## Hızlı başlangıç
 
 Bu projeden esinlerek birşeyler yapmak istersen aşağıdaki adımları uygulayabilirsiniz. Verilerde değişiklik yaparsan bir sonraki başlıktaki veriler için yönergeyi takip etmelisin.
