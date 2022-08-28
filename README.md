@@ -5,7 +5,9 @@
 Tanıtım videosu: https://youtu.be/AfUKFJE9zsk
 
 
-https://user-images.githubusercontent.com/66255053/187023505-edbddf8d-fbfe-47b5-b7ce-10dd3a15a450.mp4
+
+https://user-images.githubusercontent.com/66255053/187074522-fbdadad4-fb8f-43cb-a0f5-b15b7ac8b83d.mp4
+
 
 
 
